@@ -1,4 +1,5 @@
 # Zgadywanka - Gra w odgadywanie obrazków
+[Zobacz Raport](https://github.com/mateuszdrozd/Picture_Reveal_Game/blob/main/zgadywanka/ZGADYWANKA.pdf)
 # Opis projektu
 "Zgadywanka" to prosta gra, w której gracz ma za zadanie odgadnąć, co przedstawia ukryty obrazek. Na planszy znajduje się 12 zakrytych elementów, które stopniowo się odsłaniają. Gracz wpisuje swoją odpowiedź w specjalnym oknie:
 
