@@ -16,7 +16,6 @@ Gra została zaimplementowana w środowisku Code::Blocks z użyciem podstaw prog
 
 ✅ Interfejs do wprowadzania odpowiedzi
 
-
 ✅ Komunikaty zwrotne o poprawności odpowiedzi
 
 ✅ Możliwość ponownego uruchomienia gry po udanej próbie
