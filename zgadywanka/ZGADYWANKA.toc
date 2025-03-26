@@ -1,0 +1,24 @@
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {1}Wstęp}{3}{section.1}%
+\contentsline {section}{\numberline {2}Streszczenie}{3}{section.2}%
+\contentsline {section}{\numberline {3}Cel Projektu}{3}{section.3}%
+\contentsline {section}{\numberline {4}Struktura Katalogów: Zgadywanka}{3}{section.4}%
+\contentsline {section}{\numberline {5}Opis Aplikacji}{4}{section.5}%
+\contentsline {section}{\numberline {6}Jak wygląda gra}{4}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Podczas Gry}{4}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Po Poprawnej Odpowiedzi}{5}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Po Błędnej Odpowiedzi}{6}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Implementacja}{6}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Implementację interaktywnej planszy z elementami}{6}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Losowe odsłninie obrazów co 50 sekund}{7}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Możliwość udzielenia odpowiedzi przez grcza}{8}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Obsługa poprawnyh i błędnych opowiedzi}{8}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Losowanie nowyh obrazków po udzieleniu poprawnej odpowiedzi}{10}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Ustawienie czasu, aby gracz wiedział jak szybko udaje mu sie podać poprawn odpowiedź oraz losowanie nowego obrazka po 50 sekundach gry}{11}{subsection.7.6}%
+\contentsline {section}{\numberline {8}Program Instalacyjny}{11}{section.8}%
+\contentsline {section}{\numberline {9}Problemy napotkane podczas tworzenia aplikacji}{12}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Problemy z Kwadratami}{12}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Problemy z Czytaniem Małych i Dużych Liter}{12}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Podział pracy}{12}{section.10}%
+\contentsline {section}{\numberline {11}Podziękowania}{12}{section.11}%
+\contentsline {section}{\numberline {12}Bibliografia}{13}{section.12}%

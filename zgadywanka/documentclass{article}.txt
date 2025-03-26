@@ -1,0 +1,231 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english, polish]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{appendix}
+\usepackage{titlesec}
+\usepackage{biblatex}
+\usepackage{xcolor}
+\addbibresource{bibliografia.bib}
+
+\title{Zgadywanka - Gra z Obrazkami \\ \Large{Sprawozdanie Projektowe}}
+\author{Julia Hryciuk, Mateusz Drozd, Jakub Kalita}
+
+\begin{document}
+	
+	\maketitle
+	\section{Wstęp}
+	W dzisiejszych czasach tworzenie gier komputerowych staje się coraz bardziej popularne i dostępne. Celem tego projektu było stworzenie prostej, interaktywnej gry w języku C++, żeby rozwijać umiejętności praktyczne w zakresie programowania.
+	
+	\section{Streszczenie}
+	% Krótkie streszczenie projektu.
+	
+	Projekt "Zgadywanka" to gra polegająca na odgadywaniu obrazków. Na planszy ukazane jest 12 elementów, z których co pewien czas odsłania się jeden. Gracz musi zgadnąć, co przedstawia obrazek, korzystając z okna odpowiedzi. Po udanej odpowiedzi wyświetla się komunikat o poprawnej odpowiedzi, a gracz może rozpocząć nową grę z losowym obrazkiem. Po niepoprawnej  odowiedzi wyswietla sie komunikat o błędzie, a gracz musi zgadywać dalej. Gra została zaimplementowana w środowisku Code::Blocks, wykorzystując podstawy programowania obiektowego.
+	
+	
+	\section{Cel Projektu}
+	% Szczegółowy opis celów projektu.
+	
+	Główne cele projektu obejmowały:
+	\begin{itemize}
+		\item Implementację interaktywnej planszy z elementami.
+		\item Losowe odsłanianie obrazków co kilka sekund.
+		\item Możliwość udzielenia odpowiedzi przez gracza.
+		\item Obsługę poprawnych i błędnych odpowiedzi.
+		\item Losowanie nowych obrazków po poprawnej odpowiedzi.
+		\item Ustawienie czasu, aby gracz wiedział jak szybko udaje mu sie podac prawidłową odpowiedź.
+	\end{itemize}
+	
+	\section{Struktura projektu}
+	\begin{verbatim}
+		/Zgadywanka
+		|-- codeblocks/
+		|-- main.cpp
+		|-- game.h
+		|-- game.cpp
+		|-- installer/
+		|-- ZgadywankaInstaller.exe
+		|-- screenshots/
+		|-- screenshot1.png
+		|-- screenshot2.png
+		|-- README.md
+	\end{verbatim}
+	
+	\section{Struktura Katalogów: Zgadywanka}
+	% Opis struktury katalogów w projekcie.
+	
+	Struktura katalogów projektu Zgadywanka jest zorganizowana w następujący sposób:
+	\begin{itemize}
+		\item \texttt{Zgadywanka/}
+		\begin{itemize}
+			\item \texttt{src/} - Kod źródłowy aplikacji.
+			\item \texttt{images/} - Zasoby graficzne (obrazki).
+			\item \texttt{docs/} - Dokumentacja projektu.
+			\item \texttt{install/} - Pliki instalacyjne.
+		\end{itemize}
+	\end{itemize}
+	
+	lub 
+	
+	\section{Struktura Projektu: Zgadywanka}
+	% Opis struktury katalogów w projekcie.
+	
+	Struktura katalogów projektu Zgadywanka jest zorganizowana w następujący sposób:
+	
+	\begin{itemize}
+		\item \texttt{Zgadywanka/}
+		\begin{itemize}
+			\item \texttt{src/} - Kod źródłowy aplikacji.
+			\begin{itemize}
+				\item \texttt{main.cpp} - Główny plik źródłowy.
+				\item \texttt{game.cpp} - Kod związany z logiką gry.
+				\item \texttt{graphics.cpp} - Kod obsługujący grafikę.
+			\end{itemize}
+			\item \texttt{include/} - Nagłówki aplikacji.
+			\begin{itemize}
+				\item \texttt{game.h} - Nagłówek pliku z logiką gry.
+				\item \texttt{graphics.h} - Nagłówek pliku obsługującego grafikę.
+			\end{itemize}
+			\item \texttt{images/} - Zasoby graficzne (obrazki).
+			\begin{itemize}
+				\item \texttt{image1.png} - Przykładowy obrazek 1.
+				\item \texttt{image2.png} - Przykładowy obrazek 2.
+				% Dodaj inne obrazki, jeśli są używane.
+			\end{itemize}
+			\item \texttt{docs/} - Dokumentacja projektu.
+			\begin{itemize}
+				\item \texttt{README.md} - Podstawowa dokumentacja projektu.
+				\item \texttt{user\_manual.pdf} - Instrukcja użytkownika.
+			\end{itemize}
+			\item \texttt{install/} - Pliki instalacyjne.
+			\begin{itemize}
+				\item \texttt{install.sh} - Skrypt instalacyjny.
+				\item \texttt{uninstall.sh} - Skrypt odinstalowujący.
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+		\section{Opis Aplikacji}
+	% Szczegółowy opis funkcji aplikacji.
+	
+	Aplikacja prezentuje interaktywną planszę z elementami, z których jeden co jakiś czas odsłania się na krótko. Gracz musi odgadnąć, co przedstawia obrazek, wpisując odpowiedź w oknie przewidzianym do tego celu. Po poprawnej odpowiedzi wyświetla się komunikat, a gracz ma możliwość rozpoczęcia nowej gry z losowym obrazkiem. W przypadku błędnej odpowiedzi czas się nie zatrzymuje, a gracz może próbować ponownie.
+	
+	\section{Jak wygląda gra}
+	
+	\subsection{Podczas Gry}
+	\begin{figure}[H]
+		\centering
+		%\includegraphics[width=0.8\linewidth]{zrzut_gry.png}
+		\caption{Zrzut ekranu podczas trwania gry.}
+		\label{fig:gry}
+	\end{figure}
+	
+	\subsection{Po Poprawnej Odpowiedzi}
+	\begin{figure}[H]
+		\centering
+		%\includegraphics[width=0.8\linewidth]{poprawna_odp.png}
+		\caption{Zrzut ekranu po udzieleniu poprawnej odpowiedzi.}
+		\label{fig:poprawna_odp}
+	\end{figure}
+	
+	\subsection{Po Błędnej Odpowiedzi}
+	\begin{figure}[H]
+		\centering
+		%\includegraphics[width=0.8\linewidth]{bledna_odp.png}
+		\caption{Zrzut ekranu po udzieleniu błędnej odpowiedzi.}
+		\label{fig:bledna_odp}
+	\end{figure}
+	
+	
+	\section{Implementacja}
+	% Opis implementacji kluczowych funkcji.
+	
+	\subsection{Implementację interaktywnej planszy z elementami}
+	% Fragmenty kodu związane z odsłanianiem elementów.
+	
+	Poniżej przedstawiono fragment kodu odpowiedzialnego za odsłanianie elementów na planszy:
+	
+	\begin{verbatim}
+		
+	\end{verbatim}
+	
+	\subsection{Losowe odsłninie obrazów co kilka sekund}
+	% Fragmenty kodu związane z obsługą odpowiedzi gracza.
+	
+	Poniżej przedstawiono fragment kodu odpowiedzialnego za losowe odsłninie obrazów co kilka sekund :
+	
+	\begin{verbatim}
+		
+	\end{verbatim}
+	
+	\subsection{Możliwość udzielenia odpowiedzi przez grcza}
+	Poniżej przedstawiono fragment kodu odpowiedzialnego za możliwość udzielenia odpowiedzi przez grcza:
+	\begin{verbatim}
+	
+	\end{verbatim}
+	
+	\subsection{Obsługa poprawnyh i błędnych opowiedzi}
+	Poniżej przedstawiono fragment kodu odpowiedzialnego za obsługa poprawnyh i błędnych opowiedzi:
+	\begin{verbatim}
+		
+	\end{verbatim}
+	
+	\subsection{Losowanie nowyh obrazków po udzieleniu poprawnej odpowiedzi}
+	Poniżej przedstawiono fragment kodu odpowiedzialnego za losowanie nowyh obrazków po udzieleniu poprawnej odpowiedzi:
+	\begin{verbatim}
+		
+	\end{verbatim}
+	
+	\subsection{Ustawienie czasu, aby gracz wiedział jak szybko udaje mu sie podać poprawn odpowiedź}
+	Poniżej przedstawiono fragment kodu odpowiedzialnego za ustawienie czasu, aby gracz wiedział jak szybko udaje mu sie podać poprawną odpowiedź:
+	\begin{verbatim}
+		
+	\end{verbatim}
+	
+	\section{Program Instalacyjny}
+	% Opis procesu instalacji aplikacji.
+	
+	Aby zainstalować aplikację Zgadywanka, wykonaj następujące kroki:
+	\begin{enumerate}
+		\item Przejdź do katalogu \texttt{install/}.
+		\item Uruchom plik instalacyjny \texttt{install.sh}.
+		\item Postępuj zgodnie z instrukcjami na ekranie.
+	\end{enumerate}
+	\section{Problemy napotkane podczas tworzenia aplikacji}
+
+
+Podczas procesu tworzenia aplikacji "Zgadywanka" napotkaliśmy pewne wyzwania, które wymagały dodatkowej uwagi i rozważań. Poniżej przedstawiamy szczegółowy opis tych problemów.
+
+\subsection{Problemy z Kwadratami}
+
+\begin{enumerate}
+	\item \textbf{Przesłanianie Kwadratów:} W trakcie implementacji zauważyliśmy, że kwadraty, reprezentujące elementy gry, czasami nakładają się na siebie w sposób, który nie spełnia naszych oczekiwań estetycznych. To zjawisko wymagało dodatkowej uwagi w zakresie warstw i pozycjonowania kwadratów, aby osiągnąć pożądany efekt wizualny.
+	
+	\item \textbf{Animacja Odsłaniania:} Kolejnym problemem było zapewnienie płynnej animacji odsłaniania kwadratów. Choć podstawowa logika animacji została zaimplementowana, pojawiły się wyzwania związane z optymalizacją tego procesu, aby uzyskać satysfakcjonujący efekt wizualny.
+\end{enumerate}
+
+\subsection{Problemy z Czytaniem Małych i Dużych Liter}
+
+\begin{enumerate}
+	\item \textbf{Weryfikacja Wielkości Liter:} W funkcji odpowiedzialnej za odczyt liter, napotkaliśmy trudności z prawidłowym rozróżnieniem między małymi a dużymi literami. Było istotne stworzenie mechanizmu weryfikującego wielkość liter, aby poprawnie interpretować odpowiedzi użytkownika.
+	
+	\item \textbf{Normalizacja Wielkości Liter:} Dodatkowym wyzwaniem było zagwarantowanie spójności w interpretacji liter bez względu na ich wielkość. Zastosowaliśmy funkcje dostępne w języku C++.
+\end{enumerate}
+
+	\section{Podział pracy}
+
+	\item \textbf {Julia Hryciuk} .
+	\item \textbf {Mateusz Drozd} .
+	\item \textbf {Jakub Kalita} .
+	
+	\section{Podziękowania}
+	Chcielibyśmy podziękować naszemu opiekunowi projektu za cenne wskazówki i wsparcie w trakcie realizacji zadania.
+	
+	\section{Bibliografia}
+
+	
+\end{document}
